@@ -1,17 +1,36 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
 #principal {
     margin: 10%;
 }
 
-#principal {
+#titre {
     border-width: 2px;
     border-color: #BF9268;
     border-style: solid;
     text-align: center;
+    color: #303848;
 }
 
+#coordonee {
+    text-align: center;
+}
 #principal h1 {
-    font-size: 2rem;
+    font-size: 1.5em;
 }
 #principal h2 {
-    font-size: 1.5rem;
+    font-size: 1.2em;
+}
+
+#objectif_style {
+    text-align: center;
+}
+
+#objectif_style h3 {
+    background-color: #303848;
+    margin-left: 20%;
+    margin-right: 20%;
+    color: white;
 }
