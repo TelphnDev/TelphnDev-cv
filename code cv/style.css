@@ -1,0 +1,13 @@
+#principal {
+    display: block;
+    margin: 10%;
+}
+#principal h2 {
+    margin-top: -5%;
+}
+#titre {
+    text-align: center;
+    border-width: 2px;
+    border-color: #BF9268;
+    border-style: solid;
+}
