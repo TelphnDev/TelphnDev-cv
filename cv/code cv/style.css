@@ -1,0 +1,17 @@
+#principal {
+    margin: 10%;
+}
+
+#principal {
+    border-width: 2px;
+    border-color: #BF9268;
+    border-style: solid;
+    text-align: center;
+}
+
+#principal h1 {
+    font-size: 2rem;
+}
+#principal h2 {
+    font-size: 1.5rem;
+}
