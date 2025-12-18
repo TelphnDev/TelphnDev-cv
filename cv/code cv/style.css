@@ -32,6 +32,7 @@ body {
 
 #objectif_style h3 {
     background-color: #303848;
+
     margin-left: 20%;
     margin-right: 20%;
     color: white;
@@ -50,4 +51,8 @@ hr {
     padding: 0;
     position: relative;   /* important */
     z-index: 1;
+}
+
+#objectif_texte {
+    margin: 1.7em 0;
 }
