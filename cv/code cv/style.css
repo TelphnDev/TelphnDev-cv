@@ -2,57 +2,79 @@ body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+/* Conteneur principal */
 #principal {
     margin: 10%;
 }
 
+/* Bloc titre */
 #titre {
-    border-width: 2px;
-    border-color: #BF9268;
-    border-style: solid;
     text-align: center;
     color: #303848;
+    border: 2px solid #BF9268;
 }
 
+/* Coordonnées */
 #coordonee {
     text-align: center;
 }
+
+/* Tailles des titres */
 #principal h1 {
     font-size: 1.5em;
 }
+
 #principal h2 {
     font-size: 1.2em;
 }
 
+/* Section objectif */
 #objectif_style {
     text-align: center;
 }
 
-
-
 #objectif_style h3 {
     background-color: #303848;
+    color: white;
 
+    /* ON GARDE EXACTEMENT LE MÊME COMPORTEMENT */
     margin-left: 20%;
     margin-right: 20%;
-    color: white;
-    position: relative;   /* important */
+
+    position: relative;
     z-index: 2;
 }
 
-
+/* Ligne horizontale */
 hr {
     display: block;
-    height: 20px;
     width: 100%;
+    height: 20px;
+
     border: 0;
     border-top: 1px solid #BF9268;
+
     margin: -1.9em 0;
     padding: 0;
-    position: relative;   /* important */
+
+    position: relative;
     z-index: 1;
 }
 
+/* Texte objectif */
 #objectif_texte {
     margin: 1.7em 0;
 }
+
+/* block regroupe reste */
+#bloc {
+    display: flex;
+    flex-wrap: wrap;
+    mmargin: 10%;
+}
+
+#bloc_1 {
+    background-color: #F2F2F2;
+    margin: 0 auto;
+}
+
