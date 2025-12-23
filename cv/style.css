@@ -1,5 +1,8 @@
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Empêche le défilement horizontal */
 }
 
 /* Conteneur principal */
@@ -73,13 +76,16 @@ hr {
     margin-left: 20%;
     margin-right: 20%;
     align-content: space-evenly;
-    gap: 20px; /* Espace entre les éléments */
+    gap: 20px;
+    max-width: 100%; /* Empêche le débordement */
+    box-sizing: border-box;
 }
 
 #bloc_1 {
     background-color: #F2F2F2;
-    flex: 0 0 250px; /* Largeur fixe pour bloc_1 */
-    min-width: 250px;
+    flex: 0 0 250px;
+    min-width: 0; /* Permet au bloc de rétrécir */
+    box-sizing: border-box;
 }
 
 #bloc_1 p {
@@ -91,13 +97,15 @@ hr {
 }
 
 #bloc_2 {
-    flex: 1; /* Prend l'espace restant */
-    min-width: 300px; /* Largeur minimale avant de passer en dessous */
+    flex: 1;
+    min-width: 0; /* Permet au bloc de rétrécir */
+    box-sizing: border-box;
 }
 
 .bloc_2_titre {
     position: relative;
     width: auto;
+    max-width: 100%; /* Empêche le débordement */
 }
 
 .bloc_2_titre h2 {
@@ -108,6 +116,8 @@ hr {
     margin: 0;
     position: relative;
     z-index: 2;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 .bloc_2_titre::after {
@@ -123,8 +133,57 @@ hr {
 }
 
 /* Responsive : empiler sur petits écrans */
-@media (max-width: 768px) {
-    #bloc_1, #bloc_2 {
-        flex: 1 1 100%;
+@media (max-width: 660px) {
+    #principal {
+        margin: 5%;
+    }
+
+    #bloc {
+        margin-left: 0; /* Supprime la marge gauche */
+        margin-right: 5%;
+        justify-content: flex-start; /* Aligne à gauche */
+    }
+
+    #bloc_1 {
+        flex: 0 0 40%; /* Bloc_1 prend 40% de la largeur */
+        max-width: 40%;
+        margin-left: 5%; /* Espace à gauche */
+    }
+
+    #bloc_2 {
+        flex: 1; /* Bloc_2 prend l'espace restant */
+        min-width: 0;
+    }
+
+    #objectif_style h2 {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+}
+
+@media (max-width: 480px) {
+    #principal {
+        margin: 3%;
+    }
+
+    #bloc {
+        margin-left: 0;
+        margin-right: 3%;
+        gap: 15px;
+    }
+
+    #bloc_1 {
+        flex: 0 0 35%; /* Bloc_1 prend 35% sur très petits écrans */
+        max-width: 35%;
+        margin-left: 3%;
+    }
+
+    #bloc_2 {
+        flex: 1;
+    }
+
+    #objectif_style h2 {
+        margin-left: 0;
+        margin-right: 0;
     }
 }
