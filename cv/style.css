@@ -33,7 +33,7 @@ body {
     text-align: center;
 }
 
-#objectif_style h3 {
+#objectif_style h2 {
     background-color: #303848;
     color: white;
 
@@ -54,7 +54,7 @@ hr {
     border: 0;
     border-top: 1px solid #BF9268;
 
-    margin: -1.9em 0;
+    margin: -1.7em 0;
     padding: 0;
 
     position: relative;
@@ -70,11 +70,61 @@ hr {
 #bloc {
     display: flex;
     flex-wrap: wrap;
-    mmargin: 10%;
+    margin-left: 20%;
+    margin-right: 20%;
+    align-content: space-evenly;
+    gap: 20px; /* Espace entre les éléments */
 }
 
 #bloc_1 {
     background-color: #F2F2F2;
-    margin: 0 auto;
+    flex: 0 0 250px; /* Largeur fixe pour bloc_1 */
+    min-width: 250px;
 }
 
+#bloc_1 p {
+    margin-left: 10%;
+}
+
+#hoby_titre {
+    margin-top: 30%;
+}
+
+#bloc_2 {
+    flex: 1; /* Prend l'espace restant */
+    min-width: 300px; /* Largeur minimale avant de passer en dessous */
+}
+
+.bloc_2_titre {
+    position: relative;
+    width: auto;
+}
+
+.bloc_2_titre h2 {
+    color: white;
+    background-color: #303848;
+    display: inline-block;
+    padding-right: 20px;
+    margin: 0;
+    position: relative;
+    z-index: 2;
+}
+
+.bloc_2_titre::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #BF9268;
+    z-index: 1;
+    transform: translateY(-50%);
+}
+
+/* Responsive : empiler sur petits écrans */
+@media (max-width: 768px) {
+    #bloc_1, #bloc_2 {
+        flex: 1 1 100%;
+    }
+}
