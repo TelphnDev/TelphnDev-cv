@@ -1,0 +1,43 @@
+<!--
+Source - https://stackoverflow.com/a
+Posted by snrlx, modified by community. See post 'Timeline' for change history
+Retrieved 2026-01-07, License - CC BY-SA 4.0
+-->
+
+<!DOCTYPE html>
+<html>
+<body>
+<button onclick="exportPDF()">Exporter en PDF</button>
+
+<div id="content">
+    <h1>Ma page</h1>
+    <p>Contenu à convertir en PDF</p>
+</div>
+
+    <script>
+        function exportPDF() {
+        window.print();
+    }
+    </script>
+<style>
+    @media print {
+        body * {
+            visibility: hidden;
+        }
+
+        #content, #content * {
+            visibility: visible;
+        }
+
+        #content {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+        }
+    }
+</style>
+
+</div>
+</body>
+</html>
