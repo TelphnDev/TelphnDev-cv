@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Mathieu SIMON</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #f5f5f5;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            min-height: 100vh;
+            box-shadow: 0 0 30px rgba(0,0,0,0.1);
+        }
+
+        /* Colonne de gauche - Sidebar */
+        .sidebar {
+            background: #2c3e50;
+            color: white;
+            padding: 40px 30px;
+        }
+
+        .profile-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: #34495e;
+            margin: 0 auto 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 60px;
+            border: 5px solid #1abc9c;
+            overflow: hidden;
+        }
+
+        .profile-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .name {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .name h1 {
+            font-size: 1.8em;
+            margin-bottom: 5px;
+            font-weight: 300;
+            letter-spacing: 2px;
+        }
+
+        .name .role {
+            font-size: 1em;
+            color: #1abc9c;
+            font-weight: 300;
+        }
+
+        .sidebar-section {
+            margin-top: 40px;
+        }
+
+        .sidebar-title {
+            font-size: 0.9em;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+            color: #1abc9c;
+            border-bottom: 1px solid #34495e;
+            padding-bottom: 8px;
+        }
+
+        .contact-item {
+            margin-bottom: 15px;
+            font-size: 0.85em;
+            line-height: 1.6;
+        }
+
+        .contact-item strong {
+            display: block;
+            color: #1abc9c;
+            margin-bottom: 3px;
+        }
+
+        .skill-bar {
+            margin-bottom: 15px;
+        }
+
+        .skill-name {
+            font-size: 0.85em;
+            margin-bottom: 5px;
+        }
+
+        .hobby-item {
+            font-size: 0.85em;
+            margin-bottom: 10px;
+            padding-left: 15px;
+            position: relative;
+        }
+
+        .hobby-item:before {
+            content: "▪";
+            position: absolute;
+            left: 0;
+            color: #1abc9c;
+        }
+
+        /* Colonne de droite - Contenu principal */
+        .main-content {
+            padding: 40px 50px;
+            background: white;
+        }
+
+        .main-section {
+            margin-bottom: 35px;
+        }
+
+        .main-title {
+            font-size: 1.3em;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 20px;
+            color: #2c3e50;
+            font-weight: 300;
+        }
+
+        .objective-text {
+            line-height: 1.8;
+            color: #555;
+            font-size: 0.95em;
+        }
+
+        .experience-item {
+            margin-bottom: 25px;
+            border-left: 3px solid #1abc9c;
+            padding-left: 20px;
+        }
+
+        .experience-title {
+            font-size: 1.1em;
+            color: #2c3e50;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .experience-subtitle {
+            color: #1abc9c;
+            font-size: 0.9em;
+            margin-bottom: 8px;
+        }
+
+        .experience-desc {
+            color: #666;
+            line-height: 1.6;
+            font-size: 0.9em;
+        }
+
+        .education-item {
+            margin-bottom: 20px;
+        }
+
+        .education-title {
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+
+        .education-subtitle {
+            color: #666;
+            font-size: 0.9em;
+            line-height: 1.6;
+        }
+
+        .leadership-item {
+            margin-bottom: 12px;
+            padding-left: 20px;
+            position: relative;
+            color: #666;
+            font-size: 0.9em;
+        }
+
+        .leadership-item:before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #1abc9c;
+            font-size: 1.2em;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            body {
+                padding: 0;
+            }
+
+            .container {
+                grid-template-columns: 1fr;
+            }
+
+            .sidebar {
+                padding: 30px 20px;
+            }
+
+            .main-content {
+                padding: 30px 20px;
+            }
+
+            .name h1 {
+                font-size: 1.5em;
+            }
+
+            .main-title {
+                font-size: 1.1em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .profile-photo {
+                width: 120px;
+                height: 120px;
+            }
+
+            .name h1 {
+                font-size: 1.3em;
+            }
+
+            .main-content {
+                padding: 20px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar gauche -->
+        <div class="sidebar">
+            <div class="profile-photo">
+                <img src="https://via.placeholder.com/150/2c3e50/1abc9c?text=MS" alt="Photo">
+            </div>
+
+            <div class="name">
+                <h1>Mathieu<br>SIMON</h1>
+                <div class="role">Etudiant</div>
+            </div>
+
+            <div class="sidebar-section">
+                <div class="sidebar-title">Contact</div>
+                <div class="contact-item">
+                    <strong>Adresse</strong>
+                    126 rue des Romains<br>
+                    Mulhouse
+                </div>
+                <div class="contact-item">
+                    <strong>Téléphone</strong>
+                    06 21 66 62 88
+                </div>
+                <div class="contact-item">
+                    <strong>Email</strong>
+                    Mathisuesimon.pro@outlook.com
+                </div>
+            </div>
+
+            <div class="sidebar-section">
+                <div class="sidebar-title">Compétences Clés</div>
+                <div class="skill-bar">
+                    <div class="skill-name">Cisco Packet Tracer</div>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-name">C#</div>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-name">JavaScript</div>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-name">PHP</div>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-name">Shellcode</div>
+                </div>
+            </div>
+
+            <div class="sidebar-section">
+                <div class="sidebar-title">Hobby</div>
+                <div class="hobby-item">Sport</div>
+                <div class="hobby-item">Jardinage</div>
+                <div class="hobby-item">Cybersécurité</div>
+            </div>
+        </div>
+
+        <!-- Contenu principal -->
+        <div class="main-content">
+            <div class="main-section">
+                <h2 class="main-title">Objectif</h2>
+                <p class="objective-text">
+                    Consolider et élargir mes compétences, acquises au cours de mes études et de mes recherches
+                    personnelles, afin de les appliquer efficacement en situation professionnelle.
+                </p>
+            </div>
+
+            <div class="main-section">
+                <h2 class="main-title">Expérience</h2>
+                
+                <div class="experience-item">
+                    <div class="experience-title">Développeur web</div>
+                    <div class="experience-subtitle">Spinaly Design • Développement web</div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="experience-title">Développeur de jeux</div>
+                    <div class="experience-subtitle">Origine Info • Développement de jeux web</div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="experience-title">Informaticien</div>
+                    <div class="experience-subtitle">GMA Solution • Maintenance, montage ordinateur, installation réseau</div>
+                    <div class="experience-desc">
+                        Installation d'un réseau avec test de sécurité réseaux, configuration switch et tentative de 
+                        contourner le mot de passe perdu, montage ordinateur, réparation, programmation shell et web.
+                    </div>
+                </div>
+            </div>
+
+            <div class="main-section">
+                <h2 class="main-title">Parcours Scolaire</h2>
+                
+                <div class="education-item">
+                    <div class="education-title">BTS Services Informatiques aux Organisations</div>
+                </div>
+
+                <div class="education-item">
+                    <div class="education-title">Diplôme du Bac Professionnel Système Numérique</div>
+                    <div class="education-subtitle">Option : Réseaux informatiques et systèmes communicants</div>
+                </div>
+            </div>
+
+            <div class="main-section">
+                <h2 class="main-title">Leadership</h2>
+                <div class="leadership-item">Conseil municipal des jeunes à Habsheim en 2020</div>
+                <div class="leadership-item">Conseil des jeunes en 2025</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
